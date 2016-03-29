@@ -17,5 +17,9 @@ add_executable(pointer-to-vector-danger
 
 add_executable(virtual-destructor-synchronization-bug
                virtual-destructor-synchronization-bug/main.cpp)
+
+if(WIN32)
+else()
 target_link_libraries(virtual-destructor-synchronization-bug pthread)
+endif()
 
